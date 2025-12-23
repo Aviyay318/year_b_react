@@ -17,10 +17,10 @@ export default function Board() {
     };
 
     const[board,setBoard] = useState(creatBoard())
-    const [currentPlayer, setCurrentPlayer] = useState("X")
+    const [player1,setPlayer1] = useState({color:"red"});
+    const [player2,setPlayer2] = useState({color:"yellow"});
+    const [currentPlayer, setCurrentPlayer] = useState("player1")
     const [winner, setWinner] = useState(null)
-
-
 
 
 const drawPlayer =(rowIndex , colIndex)=>{
@@ -28,6 +28,7 @@ const drawPlayer =(rowIndex , colIndex)=>{
     if (board[rowIndex][colIndex].value !== "")  return;
     const newBoard = [...board];
     newBoard[rowIndex][colIndex].value = currentPlayer;
+    newBoard[rowIndex][colIndex].color= currentPlayer==="player1"?player1.color:player2.color;
     setBoard(newBoard);
 
     if (checkWin()){

@@ -1,10 +1,14 @@
-import {Link} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
+import TodoList from "./TodoList.jsx";
+import Board from "./Board.jsx";
 
 function Navbar() {
    return (
-       <nav>
-         <Link to={"/"}>Home Page</Link>
-         
+       <nav style={{display:"flex" ,gap:20}}>
+         <Link to={"/"}>Home Page </Link>
+         <Link to={"/productList"}>products</Link>
+         <Link to={"/cart"}>cart</Link>
+
        </nav>
    )
 }
