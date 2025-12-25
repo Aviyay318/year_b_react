@@ -2,7 +2,7 @@ import "./App.css"
 import Board from "./components/Board.jsx";
 import {useState} from "react";
 import TodoList from "./components/TodoList.jsx";
-import Ex1 from "./components/Ex1.jsx";
+import Register2 from "./components/Register2.jsx";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import HomePage from "./components/HomePage.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -13,6 +13,7 @@ import Setting from "./components/Setting.jsx";
 import axios from "axios";
 import Cart from "./components/Cart.jsx";
 import Products from "./components/Products.jsx";
+import Register from "./components/Register.jsx";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                    <Route path={"/board"} element={<Board/>}/>
                    <Route path={"/cart"} element={<Cart />} />
                    <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>
+                   <Route path={"/register"} element={<Register />} />
                </Routes>
            </BrowserRouter>
         </div>

@@ -8,6 +8,7 @@ function Navbar() {
          <Link to={"/"}>Home Page </Link>
          <Link to={"/productList"}>products</Link>
          <Link to={"/cart"}>cart</Link>
+         <Link to={"/register"}>Register</Link>
 
        </nav>
    )

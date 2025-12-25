@@ -2,7 +2,7 @@ import {useState} from "react";
 import "./Ex1.css"
 
 
-function Ex1() {
+function Register2() {
 
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
@@ -39,4 +39,4 @@ function Ex1() {
     );
 }
 
-export default Ex1;
+export default Register2;
