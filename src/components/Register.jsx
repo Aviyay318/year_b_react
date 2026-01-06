@@ -13,11 +13,10 @@ function Register() {
         //localhost -> ip - הכתובת של השרת
         //8080 -> פורט
         //register-user הנתיב לשירות הספציפי בתוך האפליקציה / בשרת
-        axios.post("http://localhost:8080/register-user",user).
+        axios.post("http://localhost:8080/register-user",{name:user.name,password:user.password}).
         then((response)=>{
-          if (response.data.success){
+            console.log(response.data)
 
-          }
         })
 
     }

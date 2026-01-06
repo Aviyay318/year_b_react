@@ -14,11 +14,12 @@ import axios from "axios";
 import Cart from "./components/Cart.jsx";
 import Products from "./components/Products.jsx";
 import Register from "./components/Register.jsx";
+import ImageComponent from "./components/DisplayImage.jsx";
+import ShowCategory from "./components/ShowCategory.jsx";
 
 
 function App() {
-   const [products, setProducts] = useState([]);
-   const [cart,setCart] = useState([])
+
 
 
 
@@ -27,20 +28,21 @@ function App() {
         <div>
 
 
+            <ShowCategory />
 
 
-            <BrowserRouter>
-                <Navbar />
+           {/* <BrowserRouter>*/}
+           {/*     <Navbar />*/}
 
-               <Routes>
-                   <Route path={"/"} element={<HomePage />}/>
-                   <Route path={"/todolist"} element={<TodoList />}/>
-                   <Route path={"/board"} element={<Board/>}/>
-                   <Route path={"/cart"} element={<Cart />} />
-                   <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>
-                   <Route path={"/register"} element={<Register />} />
-               </Routes>
-           </BrowserRouter>
+           {/*    <Routes>*/}
+           {/*        <Route path={"/"} element={<HomePage />}/>*/}
+           {/*        <Route path={"/todolist"} element={<TodoList />}/>*/}
+           {/*        <Route path={"/board"} element={<Board/>}/>*/}
+           {/*        <Route path={"/cart"} element={<Cart />} />*/}
+           {/*        <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>*/}
+           {/*        <Route path={"/register"} element={<Register />} />*/}
+           {/*    </Routes>*/}
+           {/*</BrowserRouter>*/}
         </div>
     );
 }
