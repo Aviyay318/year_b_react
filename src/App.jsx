@@ -16,6 +16,7 @@ import Products from "./components/Products.jsx";
 import Register from "./components/Register.jsx";
 import ImageComponent from "./components/DisplayImage.jsx";
 import ShowCategory from "./components/ShowCategory.jsx";
+import AddProduct from "./components/AddProduct.jsx";
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
         <div>
 
 
-            <ShowCategory />
+       <AddProduct />
 
 
            {/* <BrowserRouter>*/}
