@@ -17,20 +17,22 @@ import Register from "./components/Register.jsx";
 import ImageComponent from "./components/DisplayImage.jsx";
 import ShowCategory from "./components/ShowCategory.jsx";
 import AddProduct from "./components/AddProduct.jsx";
+import Cookies from "js-cookie";
+import Login from "./components/Login.jsx";
 
 
 function App() {
 
-
-
-
+const addToken=()=>{
+    Cookies.set("abc" ,"222");
+    alert(Cookies.get("abc"));
+    Cookies.remove("abc");
+}
 
     return (
         <div>
 
-
-       <AddProduct />
-
+       <Register />
 
            {/* <BrowserRouter>*/}
            {/*     <Navbar />*/}

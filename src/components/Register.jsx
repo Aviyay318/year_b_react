@@ -1,51 +1,88 @@
-import {useState} from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function Register() {
+   const [user, setUser] = useState({
+       username:"",
+       password:"",
+       phoneNumber:"",
+       gender:"",
+       email:""
+   });
+   const handleRegister=()=>{
+      axios.post("http://localhost:8080/register-user",user)
+          .then((response)=>{
+              if (response.data!==null){
+                  if (response.data.successes){
 
-    const[user,setUser] = useState({
-        name:"",
-        password:"",
-    });
+                  }else {
 
-    const register =()=>{
-        //http: - פרוטוקול
-        //localhost -> ip - הכתובת של השרת
-        //8080 -> פורט
-        //register-user הנתיב לשירות הספציפי בתוך האפליקציה / בשרת
-        axios.post("http://localhost:8080/register-user",{name:user.name,password:user.password}).
-        then((response)=>{
-            console.log(response.data)
+                  }
+              }
+          })
 
-        })
+   }
 
-    }
+   return(
+       <form onSubmit={handleRegister}>
+           <h2>Register</h2>
+           <div>
+               <label>user name:</label>
+               <input
+                   type={"text"}
+                   value={user.username}
+                   onChange={(e) => setUser({...user, username: e.target.value})}/>
+           </div>
 
-    return(
-        <div>
-            <h3>Register</h3>
-            <div>
-                <input type={"text"}
-                       value={user.name}
-                       placeholder={"enter username"}
-                       onChange={(e) => setUser({...user, name: e.target.value})}/>
-                <br/>
-                {user.name.length < 5 && <label> username len must to be at least 5 letters </label>}
-            </div>
+           <div>
+               <label>password:</label>
+               <input
+                   type={"password"}
+                   value={user.password}
+                   onChange={(e) => setUser({...user, password: e.target.value})}/>
+           </div>
 
+           <div>
+               <label>phoneNumber:</label>
+               <input
+                   type={"number"}
+                   value={user.phoneNumber}
+                   onChange={(e) => setUser({...user, phoneNumber: e.target.value})}/>
+           </div>
 
-            <div>
-                <input type={"password"}
-                       value={user.password}
-                       placeholder={"enter password"}
-                       onChange={(e) => setUser({...user, password: e.target.value})}/>
-                <br/>
-                {user.password.length < 8 && <label> password len must to be at least 8 letters </label>}
-            </div>
+           <div>
+               <label>gender:</label>
+               <label>
+                   <input name={user.gender}
+                          value={"male"}
+                          type={"radio"}
+                          checked={user.gender === "male"}
+                          onChange={(e) => setUser({...user, gender: e.target.value})}
+                   />
+                   male
+               </label>
+               <label>
+                   <input name={user.gender}
+                          value={"female"}
+                          type={"radio"}
+                          checked={user.gender === "female"}
+                          onChange={(e) => setUser({...user, gender: e.target.value})}
+                   />
+                   female
+               </label>
+           </div>
+           <div>
+               <label>email:</label>
+               <input
+                   type={"text"}
+                   value={user.email}
+                   onChange={(e) => setUser({...user, email: e.target.value})}/>
+           </div>
 
-             <button onClick={register}>Register</button>
-        </div>
-    )
+           <button type={"submit"}>register</button>
+       </form>
+   )
 }
+
 
 export default Register;
