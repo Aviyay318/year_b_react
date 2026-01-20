@@ -19,6 +19,8 @@ import ShowCategory from "./components/ShowCategory.jsx";
 import AddProduct from "./components/AddProduct.jsx";
 import Cookies from "js-cookie";
 import Login from "./components/Login.jsx";
+import AddCourse from "./components/AddCourse.jsx";
+import Courses from "./components/Courses.jsx";
 
 
 function App() {
@@ -32,7 +34,7 @@ const addToken=()=>{
     return (
         <div>
 
-       <Register />
+      <Courses />
 
            {/* <BrowserRouter>*/}
            {/*     <Navbar />*/}
