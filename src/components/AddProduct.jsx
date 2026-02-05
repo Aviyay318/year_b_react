@@ -37,7 +37,7 @@ function AddProduct() {
     const handleSubmit=(event)=>{
         event.preventDefault()
 
-        if (imgRegex()){
+        if (imgRegex()&&nameRegex()&&phoneRegex()){
             console.log("successes")
         }else {
             console.log("error")

@@ -4,7 +4,7 @@ import Product from "./Product.jsx";
 
 const ShowCategory = () => {
 
-    const [categories,setCategories] = useState([]);
+    const [categories,setCategories] = useState([{id:1,name:"a"},{id:2,name:"b"}]);
     const [selectCategory,setSelectCategory] = useState("");
     const [products,setProducts] = useState([]);
 
