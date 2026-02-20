@@ -24,6 +24,10 @@ import Courses from "./components/Courses.jsx";
 import IceCreamFlavorForm from "./components/IceCreamFlavorForm.jsx";
 import IceCream from "./components/IceCream.jsx";
 import BarrowBook from "./components/barrowBook.jsx";
+import AddBook from "./components/AddBook.jsx";
+import AddAuthor from "./components/AddAuthor.jsx";
+import IceCreamExercise from "./components/IceCreamExercise.jsx";
+import ShimritIceCream from "./components/ShimritIceCream.jsx";
 
 
 function App() {
@@ -35,29 +39,90 @@ const addToken=()=>{
 
 }
 
-const[fruits,setfruits]=useState(["apple","banana","melon"]);
-const[userFruits,setUserFruits]= useState([]);
+const[gender,setGender]=useState("");
 
-function addFruits(fruit){
-
-}
 
     return (
         <div>
-           <BarrowBook />
 
-           {/* <BrowserRouter>*/}
-           {/*     <Navbar />*/}
+            {/*<label>*/}
+            {/*    male*/}
+            {/*    <input*/}
+            {/*        name={gender}*/}
+            {/*        value={"male"}*/}
+            {/*        checked={gender==="male"}*/}
+            {/*        onChange={(e) => setGender(e.target.value)}*/}
+            {/*        type={"radio"}/>*/}
+            {/*</label>*/}
 
-           {/*    <Routes>*/}
-           {/*        <Route path={"/"} element={<HomePage />}/>*/}
-           {/*        <Route path={"/todolist"} element={<TodoList />}/>*/}
-           {/*        <Route path={"/board"} element={<Board/>}/>*/}
-           {/*        <Route path={"/cart"} element={<Cart />} />*/}
-           {/*        <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>*/}
-           {/*        <Route path={"/register"} element={<Register />} />*/}
-           {/*    </Routes>*/}
-           {/*</BrowserRouter>*/}
+            {/*<label>*/}
+            {/*    female*/}
+            {/*    <input*/}
+            {/*        name={gender}*/}
+            {/*        value={"female"}*/}
+            {/*        checked={gender==="female"}*/}
+            {/*        onChange={(e) => setGender(e.target.value)}*/}
+            {/*        type={"radio"}/>*/}
+            {/*</label>*/}
+
+
+            <ShimritIceCream/>
+
+
+            {/*<select value={userChoice} onChange={(e) => setUserChoice(e.target.value)}>*/}
+            {/*    <option value={"תפוח"}>תפוח</option>*/}
+            {/*    <option value={"banana"}>2</option>*/}
+            {/*    <option value={"998700-30"}>לינארית</option>*/}
+            {/*    <option value={4}>4</option>*/}
+            {/*</select>*/}
+
+
+            {/* בחירה מרובה - ק'אקצ בוקס*/}
+            {/* בחירה מתוך אפשרויות יחידה - סלקט ואופשיין*/}
+            {/* בחירה יחידה כן/לא ,מגדר יהיה רדיו*/}
+
+
+            {/*<label>*/}
+            {/*    זכר*/}
+            {/*    <input type={"radio"}*/}
+            {/*           name={gender}*/}
+            {/*           value={"זכר"}*/}
+            {/*    checked={gender==="זכר"}*/}
+            {/*    onChange={(e) => setGender(e.target.value)}/>*/}
+            {/*</label>*/}
+
+            {/*<label>*/}
+            {/*    נקבה*/}
+            {/*    <input type={"radio"}*/}
+            {/*           name={gender}*/}
+            {/*    value={"נקבה"}*/}
+            {/*    checked={gender==="נקבה"}*/}
+            {/*    onChange={(e)=>setGender(e.target.value)}/>*/}
+            {/*</label>*/}
+
+
+            {/*<select value={userCity} onChange={(e)=>{setUserCity(e.target.value);alert(userCity)}}>*/}
+            {/*    <option value={1}>אשקלון</option>*/}
+            {/*    <option value={2}>אשדוד</option>*/}
+            {/*    <option value={3}>חברון</option>*/}
+            {/*</select>*/}
+
+            {/* <BrowserRouter>*/}
+            {/* /!*<Navbar />*!/*/}
+
+            {/*    <Routes>*/}
+            {/*        /!*<Route path={"/"} element={<HomePage />}/>*!/*/}
+            {/*        /!*<Route path={"/addBook"} element={<AddBook />} />*!/*/}
+            {/*        /!*<Route path={"/AddAuthor"} element={<AddAuthor />} />*!/*/}
+
+
+            {/*        <Route path={"/todolist"} element={<TodoList />}/>*/}
+            {/*        <Route path={"/board"} element={<Board/>}/>*/}
+            {/*        <Route path={"/cart"} element={<Cart />} />*/}
+            {/*        /!*<Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>*!/*/}
+            {/*        <Route path={"/register"} element={<Register />} />*/}
+            {/*    </Routes>*/}
+            {/*</BrowserRouter>*/}
         </div>
     );
 }
