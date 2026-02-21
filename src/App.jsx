@@ -28,6 +28,7 @@ import AddBook from "./components/AddBook.jsx";
 import AddAuthor from "./components/AddAuthor.jsx";
 import IceCreamExercise from "./components/IceCreamExercise.jsx";
 import ShimritIceCream from "./components/ShimritIceCream.jsx";
+import MentorApplication from "./components/MentorApplication.jsx";
 
 
 function App() {
@@ -39,11 +40,15 @@ const addToken=()=>{
 
 }
 
-const[gender,setGender]=useState("");
+const[fruits,setFruits] = useState(["apple","banana","melon"])
+const[userChoice,setUserChoice]=useState("");
+
 
 
     return (
         <div>
+       <MentorApplication />
+
 
             {/*<label>*/}
             {/*    male*/}
@@ -66,7 +71,6 @@ const[gender,setGender]=useState("");
             {/*</label>*/}
 
 
-            <ShimritIceCream/>
 
 
             {/*<select value={userChoice} onChange={(e) => setUserChoice(e.target.value)}>*/}
